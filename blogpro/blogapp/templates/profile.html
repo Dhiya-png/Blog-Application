@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>profile page</h1>
+   {{data.username}} 
+   {{data.email}}<br><br>
+   <img src="{{data.image.url}}" alt="img"><br><br>
+   <a href="http://127.0.0.1:8000/blogapp/update/"><input type="submit" value="edit profile"></a>
+
+   <hr>
+<div class="hello">
+    {% for i in x %}
+    {{i.title}}
+    {{i.image.url}}<br>
+    {{i.content}}<br>
+    <hr>
+    {% endfor %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog App</title>
+</head>
+<body>
+    <h1>Blog Posts</h1>
+    <ul>
+        {% for post in model %}
+            <li>
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.content }}</p>
+                <p>Tags: {{ post.tags }}</p>
+                <a href="http://127.0.0.1:8000/blogapp/update_post/{{i.id}}">Update</a>
+                {% comment %} <a href="{% url 'delete_post' (link unavailable) %}">Delete</a> {% endcomment %}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="http://127.0.0.1:8000/blogapp/create/"><button>Create New Post</button></a>
+</body>
+</html>
